@@ -1,0 +1,25 @@
+{
+	"name": "timtam-mongo",
+	"description": "timtam mongodb transport",
+	"version": "0.0.1",
+	"author": {
+		"name": "vicanso 小墨鱼",
+		"email": "vicansocanbico@gmail.com"
+	},
+	"keywords": [
+		"timtam",
+		"mongodb"
+	],
+	"main": "./lib/mongo",
+	"license": "MIT",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/vicanso/timtam-mongo.git"
+	},
+	"dependencies": {
+		"lodash": "^3.10.1",
+		"mongoose": "^4.2.2"
+	},
+	"readmeFilename": "README.md",
+	"readme": "timtam mongodb transport"
+}
