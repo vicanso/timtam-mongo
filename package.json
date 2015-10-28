@@ -17,9 +17,13 @@
 		"url": "https://github.com/vicanso/timtam-mongo.git"
 	},
 	"dependencies": {
+		"debug": "^2.2.0",
 		"lodash": "^3.10.1",
 		"mongoose": "^4.2.2"
 	},
 	"readmeFilename": "README.md",
-	"readme": "timtam mongodb transport"
+	"readme": "timtam mongodb transport",
+	"devDependencies": {
+		"moment": "^2.10.6"
+	}
 }
