@@ -2,7 +2,12 @@ const timtamMongo = require('../');
 const _ = require('lodash');
 const moment = require('moment');
 
-timtamMongo.init('mongodb://black:27017/timtam');
+timtamMongo.init('mongodb://localhost/timtam');
+
+
+timtamMongo.getAllLogColections().then(function(apps) {
+	console.dir(apps);
+});
 
 
 // get today log
@@ -19,11 +24,11 @@ timtamMongo.getByDate('test', moment().format('YYYY-MM-DD'), {
 
 // 正则匹配出错日志
 timtamMongo.get('test', {
-	message : /RequireJS/gi,
+	message: /RequireJS/gi,
 	level: 'error'
-}).then(function (res) {
+}).then(function(res) {
 	console.dir(res);
-}, function (err) {
+}, function(err) {
 	// body...
 });
 
@@ -34,9 +39,9 @@ timtamMongo.count('test', {
 		'$gte': moment().format('YYYY-MM-DD') + 'T00:00:00.000Z',
 		'$lte': moment().format('YYYY-MM-DD') + 'T24:00:00.000Z'
 	}
-}).then(function (res) {
+}).then(function(res) {
 	console.dir(res);
-}, function (err) {
+}, function(err) {
 	// body...
 });
 
@@ -44,9 +49,9 @@ timtamMongo.count('test', {
 // 获取最新的100条日志
 timtamMongo.get('test', {}, {
 	limit: 50
-}).then(function (res) {
+}).then(function(res) {
 	console.dir(res.length);
-}, function (err) {
+}, function(err) {
 	// body...
 })
 
